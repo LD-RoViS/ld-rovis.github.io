@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <meta name="title" content="LD-RoViS: Training-free Robust Video Steganography for Deterministic Latent Diffusion Model - Xiangkun Wang et al.">
-  <meta name="description" content="LD-RoViS, 一种针对确定性潜在扩散模型的无训练鲁棒视频隐写框架，通过参数调制和多掩码机制，实现了超过 99% 的提取准确率。">
-  <meta name="keywords" content="Video steganography, Latent diffusion model, Generative steganography, Robustness, AI-Generated Video">
+  <meta name="description" content="LD-RoViS, a training-free robust video steganography framework for the deterministic latent diffusion model, achieves over 99% extraction accuracy via parameter modulation and a multi-mask mechanism.">
+  <meta name="keywords" content="Video steganography, Latent diffusion model, Generative steganography, Robustness, AI-Generated Video, TIFS">
   <meta name="author" content="Xiangkun Wang, Kejiang Chen, Lincong Li, Weiming Zhang, Nenghai Yu">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="USTC School of Cyber Science and Technology">
   <meta property="og:title" content="LD-RoViS: Training-free Robust Video Steganography for Deterministic Latent Diffusion Model">
-  <meta property="og:description" content="LD-RoViS, 一种针对确定性潜在扩散模型的无训练鲁棒视频隐写框架，通过参数调制和多掩码机制，实现了超过 99% 的提取准确率。">
+  <meta property="og:description" content="LD-RoViS, a training-free robust video steganography framework for the deterministic latent diffusion model, achieves over 99% extraction accuracy.">
   <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
   <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
   <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
   <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
   <meta name="twitter:title" content="LD-RoViS">
-  <meta name="twitter:description" content="LD-RoViS, 一种针对确定性潜在扩散模型的无训练鲁棒视频隐写框架，实现了超过 99% 的提取准确率。">
+  <meta name="twitter:description" content="LD-RoViS, a training-free robust video steganography framework for deterministic latent diffusion model, achieves over 99% extraction accuracy.">
   <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
   <meta name="twitter:image:alt" content="LD-RoViS - Research Preview">
 
@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  </head>
+</head>
 <body>
 
   <nav class="navbar is-white" role="navigation" aria-label="main navigation">
@@ -73,7 +73,7 @@
       <div class="navbar-start">
         <a class="navbar-item" href="#abstract">Abstract</a>
         <a class="navbar-item" href="#framework">Framework</a>
-        <a class="navbar-item" href="#video">Demo Video</a>
+        <a class="navbar-item" href="#video">Demo Videos</a>
         <a class="navbar-item" href="#results">Results</a>
         <a class="navbar-item" href="#contact">Contact</a>
       </div>
@@ -95,15 +95,15 @@
                 <span class="author-block"><a href="#" target="_blank">Nenghai Yu</a><sup>1</sup></span>
               </div>
               <div class="is-size-5 publication-authors">
-                <span class="author-block"><sup>1</sup>中国科学技术大学 (University of Science and Technology of China)</span><br/>
-                <span class="author-block"><sup>†</sup>通讯作者 (Corresponding Authors)</span>
+                <span class="author-block"><sup>1</sup>University of Science and Technology of China (USTC)</span><br/>
+                <span class="author-block"><sup>†</sup>Corresponding Authors</span>
               </div>
 
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <span class="link-block"><a href="static/pdfs/LD_RoViS_TIFS.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span></a></span>
                   <span class="link-block"><a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fab fa-github"></i></span><span>Code (Coming Soon)</span></a></span>
-                  <span class="link-block"><a href="#video" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-video"></i></span><span>Video</span></a></span>
+                  <span class="link-block"><a href="#video" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-video"></i></span><span>Video Demos</span></a></span>
                 </div>
               </div>
             </div>
@@ -116,10 +116,10 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">摘要 (Abstract)</h2>
+            <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                现有的视频隐写方法主要通过修改空间、变换或压缩域中的视频内容来嵌入秘密信息。然而，此类方法容易产生失真漂移，并容易被隐写分析检测。生成式隐写术避免了对载体数据的直接修改，提供了一种有前途的替代方案。尽管最近取得了进展，但大多数生成式隐写研究都集中在图像上，由于压缩引起的失真和视频生成模型的独特架构，很难扩展到视频。为了解决这些挑战，我们提出了 LD-RoViS，一种针对确定性潜在扩散模型的**无训练、鲁棒的视频隐写框架**。通过在扩散过程中调制隐式条件参数，LD-RoViS 构建了一个专用的隐写通道。此外，我们引入了一种新颖的**多掩码机制**来减轻视频压缩和后处理引起的错误。实验结果表明，LD-RoViS 可以在 5 秒的视频中嵌入大约 12,000 比特的数据，**提取准确率超过 99%**。
+                Existing video steganography methods primarily embed secret information by modifying video content in the spatial, transform, or compressed domains. However, such methods are prone to distortion drift and are easily detected by steganalysis. Generative steganography, which avoids direct modification of the cover data, offers a promising alternative. Despite recent advances, most generative steganography studies focus on images and are difficult to extend to videos because of compression-induced distortions and the unique architecture of video generation models. To address these challenges, we propose <strong>LD-RoViS, a training-free and robust video steganography framework for the deterministic latent diffusion model</strong>. By modulating implicit conditional parameters during the diffusion process, LD-RoViS constructs a dedicated steganographic channel. Additionally, we introduce a novel <strong>multi-mask mechanism</strong> to mitigate errors caused by video compression and post-processing. The experimental results demonstrate that LD-RoViS can embed approximately 12,000 bits of data into a 5-second video with an <strong>extraction accuracy exceeding 99%</strong>.
               </p>
             </div>
           </div>
@@ -131,10 +131,10 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">论文框图 (Framework Diagram)</h2>
+            <h2 class="title is-3">Framework Diagram</h2>
             <img src="static/images/framework.png" alt="LD-RoViS Framework Diagram" style="max-width: 100%; height: auto;">
             <p class="is-size-6 has-text-justified">
-              <strong>图 3. 我们提出的 LD-RoViS 框架图。</strong>该框架包括发送方的消息嵌入和接收方的消息提取过程，核心在于利用潜在扩散模型中的条件参数调制以及多掩码机制来增强鲁棒性。
+              <strong>Figure X. The proposed LD-RoViS framework diagram.</strong> The framework encompasses the message embedding process at the sender and the message extraction process at the receiver, leveraging conditional parameter modulation within the latent diffusion model and a multi-mask mechanism to enhance robustness.
             </p>
           </div>
         </div>
@@ -145,19 +145,59 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">视频演示 (Video Demonstration)</h2>
-            <div class="columns is-centered">
-              <div class="column">
-                <h4 class="title is-4">载体视频 (Cover Video)</h4>
-                <video controls loop muted autoplay playsinline src="static/videos/cover_video.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+            <h2 class="title is-3">Video Demonstrations (Cover vs. Stego)</h2>
+            <p class="is-size-5 subtitle">Side-by-side comparison of cover and stego videos across different scenes.</p>
+            
+            <h4 class="title is-4">Scene A: "Water"</h4>
+            <div class="columns is-centered is-vcentered">
+              <div class="column has-text-centered">
+                <p class="is-size-5">Cover Video</p>
+                <video controls loop muted autoplay playsinline src="static/videos/scene_a_cover.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
               </div>
-              <div class="column">
-                <h4 class="title is-4">隐写视频 (Stego Video)</h4>
-                <video controls loop muted autoplay playsinline src="static/videos/stego_video.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+              <div class="column has-text-centered">
+                <p class="is-size-5">Stego Video</p>
+                <video controls loop muted autoplay playsinline src="static/videos/scene_a_stego.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
               </div>
             </div>
-            <p class="is-size-6">
-              演示了原始载体视频和通过 LD-RoViS 嵌入秘密信息后生成的隐写视频。隐写视频在视觉上与载体视频保持高相似度，确保了隐蔽性。
+
+            <h4 class="title is-4">Scene B: "City Traffic"</h4>
+            <div class="columns is-centered is-vcentered">
+              <div class="column has-text-centered">
+                <p class="is-size-5">Cover Video</p>
+                <video controls loop muted autoplay playsinline src="static/videos/scene_b_cover.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+              </div>
+              <div class="column has-text-centered">
+                <p class="is-size-5">Stego Video</p>
+                <video controls loop muted autoplay playsinline src="static/videos/scene_b_stego.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+              </div>
+            </div>
+
+            <h4 class="title is-4">Scene C: "Animation"</h4>
+            <div class="columns is-centered is-vcentered">
+              <div class="column has-text-centered">
+                <p class="is-size-5">Cover Video</p>
+                <video controls loop muted autoplay playsinline src="static/videos/scene_c_cover.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+              </div>
+              <div class="column has-text-centered">
+                <p class="is-size-5">Stego Video</p>
+                <video controls loop muted autoplay playsinline src="static/videos/scene_c_stego.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+              </div>
+            </div>
+
+            <h4 class="title is-4">Scene D: "Abstract"</h4>
+            <div class="columns is-centered is-vcentered">
+              <div class="column has-text-centered">
+                <p class="is-size-5">Cover Video</p>
+                <video controls loop muted autoplay playsinline src="static/videos/scene_d_cover.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+              </div>
+              <div class="column has-text-centered">
+                <p class="is-size-5">Stego Video</p>
+                <video controls loop muted autoplay playsinline src="static/videos/scene_d_stego.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+              </div>
+            </div>
+
+            <p class="is-size-6 mt-5">
+              These demonstrations show the original cover videos and the corresponding stego videos generated by LD-RoViS after embedding secret information. The stego videos maintain high visual fidelity to the cover videos, ensuring imperceptibility.
             </p>
           </div>
         </div>
@@ -168,15 +208,15 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">主要实验结果 (Main Experimental Results)</h2>
-            <p class="subtitle is-5">与其他隐写方法的安全性（隐写分析）对比结果示例</p>
+            <h2 class="title is-3">Main Experimental Results</h2>
+            <p class="subtitle is-5">Example of Security (Steganalysis) Comparison Results</p>
             <table class="table is-striped is-hoverable is-fullwidth is-centered">
               <thead>
                 <tr>
                   <th>Method</th>
-                  <th>SUPERB</th>
-                  <th>CovNet</th>
-                  <th>LWENet</th>
+                  <th>SUPERB (Accuracy %)</th>
+                  <th>CovNet (Accuracy %)</th>
+                  <th>LWENet (Accuracy %)</th>
                 </tr>
               </thead>
               <tbody>
@@ -193,7 +233,7 @@
                   <td>1.07</td>
                 </tr>
                 <tr>
-                  <td>**LD-RoViS (请补充)**</td>
+                  <td>**LD-RoViS (Please Fill)**</td>
                   <td>...</td>
                   <td>...</td>
                   <td>...</td>
@@ -201,7 +241,7 @@
               </tbody>
             </table>
             <p class="is-size-6 has-text-justified">
-              **说明:** 上表展示了部分隐写分析检测器（如 SUPERB、CovNet、LWENet）在不同方法上的性能对比。在实际应用时，请您在表格中补充 LD-RoViS 完整的性能数据，并根据您的论文（例如 Section IV）提供准确的表格标题和数据解释。
+              <strong>Note:</strong> The table above provides an example of performance comparison across different methods using various steganalysis detectors (e.g., SUPERB, CovNet, LWENet). Please ensure to fill in the complete and accurate performance data for LD-RoViS, along with a proper table caption and data explanation as found in your paper (e.g., Section IV).
             </p>
           </div>
         </div>
@@ -212,9 +252,9 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">联系方式 (Contact Information)</h2>
+            <h2 class="title is-3">Contact Information</h2>
             <p>
-              对于本项目和论文的任何问题，请联系以下通讯作者：
+              For any questions regarding this project and paper, please contact the corresponding authors:
             </p>
             <p>
               <span class="icon-text">
@@ -227,7 +267,7 @@
               </span>
             </p>
             <p>
-              **研究机构:** 中国科学技术大学网络空间安全学院
+              **Research Institution:** School of Cyber Science and Technology, University of Science and Technology of China
             </p>
           </div>
         </div>
@@ -285,10 +325,10 @@
   function copyBibTeX() {
     const bibtexCode = document.getElementById('bibtex-code').innerText;
     navigator.clipboard.writeText(bibtexCode).then(() => {
-      alert('BibTeX 引用已复制到剪贴板。');
+      alert('BibTeX citation copied to clipboard.');
     }).catch(err => {
-      console.error('无法复制文本: ', err);
-      alert('无法复制文本。');
+      console.error('Could not copy text: ', err);
+      alert('Could not copy text.');
     });
   }
 </script>
