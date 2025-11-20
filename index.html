@@ -204,49 +204,62 @@
       </div>
     </section>
 
-    <section class="section" id="results">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Main Experimental Results</h2>
-            <p class="subtitle is-5">Example of Security (Steganalysis) Comparison Results</p>
-            <table class="table is-striped is-hoverable is-fullwidth is-centered">
-              <thead>
-                <tr>
-                  <th>Method</th>
-                  <th>SUPERB (Accuracy %)</th>
-                  <th>CovNet (Accuracy %)</th>
-                  <th>LWENet (Accuracy %)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>AQIM</td>
-                  <td>49.14</td>
-                  <td>0.13</td>
-                  <td>0.26</td>
-                </tr>
-                <tr>
-                  <td>MEC_AQIM</td>
-                  <td>47.32</td>
-                  <td>0.01</td>
-                  <td>1.07</td>
-                </tr>
-                <tr>
-                  <td>**LD-RoViS (Please Fill)**</td>
-                  <td>...</td>
-                  <td>...</td>
-                  <td>...</td>
-                </tr>
-              </tbody>
-            </table>
-            <p class="is-size-6 has-text-justified">
-              <strong>Note:</strong> The table above provides an example of performance comparison across different methods using various steganalysis detectors (e.g., SUPERB, CovNet, LWENet). Please ensure to fill in the complete and accurate performance data for LD-RoViS, along with a proper table caption and data explanation as found in your paper (e.g., Section IV).
-            </p>
-          </div>
-        </div>
+<section class="section" id="results">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Main Performance Comparison</h2>
+        <p class="subtitle is-5">Comparison of steganography performance metrics (mean $\pm$ standard deviation).</p>
+        <table class="table is-striped is-hoverable is-fullwidth is-centered is-size-7">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>PSNR (dB) $\uparrow$</th>
+              <th>BRISQUE $\downarrow$</th>
+              <th>acc (%) $\uparrow$</th>
+              <th>Capacity (bits) $\uparrow$</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AQIM</td>
+              <td>$34.81 \pm 0.44$</td>
+              <td>$32.87 \pm 6.06$</td>
+              <td><b>$99.44 \pm 0.27$</b></td>
+              <td>$10000$ (fixed)</td>
+            </tr>
+            <tr>
+              <td>MEC\_AQIM</td>
+              <td>$35.21 \pm 0.47$</td>
+              <td>$32.71 \pm 6.10$</td>
+              <td>$90.99 \pm 5.90$</td>
+              <td>$10000$ (fixed)</td>
+            </tr>
+            <tr>
+              <td>RoGVSN</td>
+              <td>--</td>
+              <td>$49.53 \pm 4.55$</td>
+              <td>$99.28 \pm 0.38$</td>
+              <td>$729$ (fixed)</td>
+            </tr>
+            <tr>
+              <td><b>LD-RoViS (Ours)</b></td>
+              <td><b>$41.66 \pm 1.52$</b></td>
+              <td><b>$28.90 \pm 6.05$</b></td>
+              <td>$99.17 \pm 0.63$</td>
+              <td><b>$11983 \pm 1446$</b></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="is-size-6 has-text-justified mt-5">
+          This table compares our LD-RoViS framework ("Ours") against state-of-the-art steganography methods based on key metrics. PSNR ($\uparrow$) and BRISQUE ($\downarrow$)** measure visual imperceptibility (higher PSNR and lower BRISQUE are better). acc ($\uparrow$) is the message extraction accuracy (robustness), and Capacity ($\uparrow$) is the amount of hidden data.
+          <br><br>
+          LD-RoViS achieves the highest visual quality (best PSNR and BRISQUE) and the largest embedding capacity ($\mathbf{11983 \pm 1446}$ bits) while maintaining a highly competitive extraction accuracy ($\mathbf{99.17\%}$), demonstrating its superior balance across imperceptibility, capacity, and robustness against distortions.
+        </p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
     
     <section class="section hero is-light is-small" id="contact">
       <div class="container is-max-desktop">
