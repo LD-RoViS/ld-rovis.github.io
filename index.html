@@ -41,8 +41,8 @@
   
   <title>LD-RoViS: Training-free Robust Video Steganography for Deterministic Latent Diffusion Model | Academic Research</title>
   
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/rabbit-in-burrow.png">
+  <link rel="apple-touch-icon" href="static/images/rabbit-in-burrow.png">
   
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
@@ -101,7 +101,7 @@
 
               <div class="column has-text-centered">
                 <div class="publication-links">
-                  <span class="link-block"><a href="static/pdfs/LD_RoViS_TIFS.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span></a></span>
+                  <span class="link-block"><a href="static/pdfs/LD_RoViS_TIFS.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper (Coming Soon)</span></a></span>
                   <span class="link-block"><a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fab fa-github"></i></span><span>Code (Coming Soon)</span></a></span>
                   <span class="link-block"><a href="#video" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-video"></i></span><span>Video Demos</span></a></span>
                 </div>
@@ -132,9 +132,9 @@
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <h2 class="title is-3">Framework Diagram</h2>
-            <img src="static/images/framework.png" alt="LD-RoViS Framework Diagram" style="max-width: 100%; height: auto;">
+            <img src="static/images/frame.png" alt="LD-RoViS Framework Diagram" style="max-width: 100%; height: auto;">
             <p class="is-size-6 has-text-justified">
-              <strong>Figure X. The proposed LD-RoViS framework diagram.</strong> The framework encompasses the message embedding process at the sender and the message extraction process at the receiver, leveraging conditional parameter modulation within the latent diffusion model and a multi-mask mechanism to enhance robustness.
+              <strong>Figure 1. The proposed LD-RoViS framework diagram.</strong> The framework encompasses the message embedding process at the sender and the message extraction process at the receiver, leveraging conditional parameter modulation within the latent diffusion model and a multi-mask mechanism to enhance robustness.
             </p>
           </div>
         </div>
@@ -148,56 +148,56 @@
             <h2 class="title is-3">Video Demonstrations (Cover vs. Stego)</h2>
             <p class="is-size-5 subtitle">Side-by-side comparison of cover and stego videos across different scenes.</p>
             
-            <h4 class="title is-4">Scene A: "Water"</h4>
+            <h4 class="title is-4">Scene A: "Underwater"</h4>
             <div class="columns is-centered is-vcentered">
               <div class="column has-text-centered">
                 <p class="is-size-5">Cover Video</p>
-                <video controls loop muted autoplay playsinline src="static/videos/scene_a_cover.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+                <video controls loop muted autoplay playsinline src="static/videos/underwater_cover.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
               </div>
               <div class="column has-text-centered">
                 <p class="is-size-5">Stego Video</p>
-                <video controls loop muted autoplay playsinline src="static/videos/scene_a_stego.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+                <video controls loop muted autoplay playsinline src="static/videos/underwater_stego.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
               </div>
             </div>
 
-            <h4 class="title is-4">Scene B: "City Traffic"</h4>
+            <h4 class="title is-4">Scene B: "Human"</h4>
             <div class="columns is-centered is-vcentered">
               <div class="column has-text-centered">
                 <p class="is-size-5">Cover Video</p>
-                <video controls loop muted autoplay playsinline src="static/videos/scene_b_cover.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+                <video controls loop muted autoplay playsinline src="static/videos/human_cover.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
               </div>
               <div class="column has-text-centered">
                 <p class="is-size-5">Stego Video</p>
-                <video controls loop muted autoplay playsinline src="static/videos/scene_b_stego.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+                <video controls loop muted autoplay playsinline src="static/videos/human_stego.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
               </div>
             </div>
 
-            <h4 class="title is-4">Scene C: "Animation"</h4>
+            <h4 class="title is-4">Scene C: "Wolf"</h4>
             <div class="columns is-centered is-vcentered">
               <div class="column has-text-centered">
                 <p class="is-size-5">Cover Video</p>
-                <video controls loop muted autoplay playsinline src="static/videos/scene_c_cover.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+                <video controls loop muted autoplay playsinline src="static/videos/wolf_cover.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
               </div>
               <div class="column has-text-centered">
                 <p class="is-size-5">Stego Video</p>
-                <video controls loop muted autoplay playsinline src="static/videos/scene_c_stego.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+                <video controls loop muted autoplay playsinline src="static/videos/wolf_stego.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
               </div>
             </div>
 
-            <h4 class="title is-4">Scene D: "Abstract"</h4>
+            <h4 class="title is-4">Scene D: "Flower"</h4>
             <div class="columns is-centered is-vcentered">
               <div class="column has-text-centered">
                 <p class="is-size-5">Cover Video</p>
-                <video controls loop muted autoplay playsinline src="static/videos/scene_d_cover.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+                <video controls loop muted autoplay playsinline src="static/videos/flower_cover.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
               </div>
               <div class="column has-text-centered">
                 <p class="is-size-5">Stego Video</p>
-                <video controls loop muted autoplay playsinline src="static/videos/scene_d_stego.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
+                <video controls loop muted autoplay playsinline src="static/videos/flower_stego.mp4" class="video-preview" style="max-width: 100%; height: auto; border: 1px solid #ddd;"></video>
               </div>
             </div>
 
             <p class="is-size-6 mt-5">
-              These demonstrations show the original cover videos and the corresponding stego videos generated by LD-RoViS after embedding secret information. The stego videos maintain high visual fidelity to the cover videos, ensuring imperceptibility.
+              LD-RoViS is a generative steganography method. The cover videos are presented here only for visual comparison. During the actual embedding process, no cover video is required for generation. These demonstrations show the high visual fidelity maintained by the stego videos, ensuring imperceptibility.
             </p>
           </div>
         </div>
