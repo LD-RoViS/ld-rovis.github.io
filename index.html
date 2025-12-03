@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <meta name="title" content="Robust Video Steganography via Multi-Mask Parameter Modulation in Deterministic Latent Diffusion Models - Xiangkun Wang et al.">
-  <meta name="description" content="MuPViS, a training-free robust video steganography framework for the deterministic latent diffusion model, achieves over 99% extraction accuracy via parameter modulation and a multi-mask mechanism.">
+  <meta name="description" content="LD-RoViS, a training-free robust video steganography framework for the deterministic latent diffusion model, achieves over 99% extraction accuracy via parameter modulation and a multi-mask mechanism.">
   <meta name="keywords" content="Video steganography, Latent diffusion model, Generative steganography, Robustness, AI-Generated Video, TIFS">
   <meta name="author" content="Xiangkun Wang, Kejiang Chen, Lincong Li, Weiming Zhang, Nenghai Yu">
   <meta name="robots" content="index, follow">
@@ -14,20 +14,20 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="USTC School of Cyber Science and Technology">
   <meta property="og:title" content="Robust Video Steganography via Multi-Mask Parameter Modulation in Deterministic Latent Diffusion Models">
-  <meta property="og:description" content="MuPViS, a training-free robust video steganography framework for the deterministic latent diffusion model, achieves over 99% extraction accuracy.">
+  <meta property="og:description" content="LD-RoViS, a training-free robust video steganography framework for the deterministic latent diffusion model, achieves over 99% extraction accuracy.">
   <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
   <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="MuPViS - Research Preview">
+  <meta property="og:image:alt" content="LD-RoViS - Research Preview">
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
   <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <meta name="twitter:title" content="MuPViS">
-  <meta name="twitter:description" content="MuPViS, a training-free robust video steganography framework for deterministic latent diffusion model, achieves over 99% extraction accuracy.">
+  <meta name="twitter:title" content="LD-RoViS">
+  <meta name="twitter:description" content="LD-RoViS, a training-free robust video steganography framework for deterministic latent diffusion model, achieves over 99% extraction accuracy.">
   <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="MuPViS - Research Preview">
+  <meta name="twitter:image:alt" content="LD-RoViS - Research Preview">
 
   <meta name="citation_title" content="Robust Video Steganography via Multi-Mask Parameter Modulation in Deterministic Latent Diffusion Models">
   <meta name="citation_author" content="Wang, Xiangkun">
@@ -37,7 +37,7 @@
   <meta name="citation_author" content="Yu, Nenghai">
   <meta name="citation_publication_date" content="2024">
   <meta name="citation_conference_title" content="IEEE TIFS">
-  <meta name="citation_pdf_url" content="static/pdfs/MuPViS_TIFS.pdf">
+  <meta name="citation_pdf_url" content="static/pdfs/LD-RoViS_TIFS.pdf">
   
   <title>Robust Video Steganography via Multi-Mask Parameter Modulation in Deterministic Latent Diffusion Models | Academic Research</title>
   
@@ -119,7 +119,7 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Traditional video steganography methods embed messages by altering video content in spatial, transform, or compression domains, leading to accumulation of distortions and detectable statistical artifacts. In contrast, generative models offer the possibility of embedding information without modifying the cover data. However, existing generative steganography methods are mostly image-based, and extending them to videos remains difficult due to the unique architecture of video generation models and the perturbations introduced by video compression. To address these challenges, we propose MuPViS, a Multi-mask Parameter-modulated Video Steganography framework built on deterministic latent diffusion models. MuPViS embeds information by modulating implicit conditional parameters during the generative process, establishing a steganographic channel without directly modifying the content of synthesized video. We further introduce a multi-mask mechanism to mitigate errors caused by compression and common post-processing operations. Experimental results show that MuPViS achieves high-capacity and high-fidelity video steganography, maintaining consistent message recovery under various compression settings.
+                Existing video steganography methods primarily embed secret information by modifying video content in the spatial or compressed domains. However, such methods are prone to distortion drift and are easily detected by steganalysis. Generative steganography, which avoids direct modification of the cover data, offers a promising alternative. Despite recent advances, most generative steganography studies focus on images and are difficult to extend to videos because of compression-induced distortions and the unique architecture of video generation models. To address these challenges, we propose LD-RoViS, a training-free and robust video steganography framework for the deterministic latent diffusion model. By modulating implicit conditional parameters during the diffusion process, LD-RoViS constructs a dedicated steganographic channel. Additionally, we introduce a novel multi-mask mechanism to mitigate errors caused by video compression and post-processing. The experimental results demonstrate that LD-RoViS can embed approximately 12,000 bits of data into a 5-second video with an extraction accuracy exceeding 99%.
               </p>
             </div>
           </div>
@@ -132,9 +132,9 @@
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <h2 class="title is-3">Framework Diagram</h2>
-            <img src="static/images/frame.png" alt="MuPViS Framework Diagram" style="max-width: 100%; height: auto;">
+            <img src="static/images/frame.png" alt="LD-RoViS Framework Diagram" style="max-width: 100%; height: auto;">
             <p class="is-size-6 has-text-justified">
-              <strong>Figure 1. The proposed MuPViS framework diagram.</strong> The framework encompasses the message embedding process at the sender and the message extraction process at the receiver, leveraging conditional parameter modulation within the latent diffusion model and a multi-mask mechanism to enhance robustness.
+              <strong>Figure 1. The proposed LD-RoViS framework diagram.</strong> The framework encompasses the message embedding process at the sender and the message extraction process at the receiver, leveraging conditional parameter modulation within the latent diffusion model and a multi-mask mechanism to enhance robustness.
             </p>
           </div>
         </div>
@@ -197,7 +197,7 @@
             </div>
 
             <p class="is-size-6 mt-5">
-              MuPViS is a generative steganography method. The cover videos are presented here only for visual comparison. During the actual embedding process, no cover video is required for generation. These demonstrations show the high visual fidelity maintained by the stego videos, ensuring imperceptibility.
+              LD-RoViS is a generative steganography method. The cover videos are presented here only for visual comparison. During the actual embedding process, no cover video is required for generation. These demonstrations show the high visual fidelity maintained by the stego videos, ensuring imperceptibility.
             </p>
           </div>
         </div>
@@ -243,7 +243,7 @@
               <td>729 (fixed)</td>
             </tr>
             <tr>
-              <td><b>MuPViS (Ours)</b></td>
+              <td><b>LD-RoViS (Ours)</b></td>
               <td><b>41.66 &plusmn; 1.52</b></td>
               <td><b>28.90 &plusmn; 6.05</b></td>
               <td>99.17 &plusmn; 0.63</td>
@@ -252,9 +252,9 @@
           </tbody>
         </table>
         <p class="is-size-6 has-text-justified mt-5">
-          This table compares our <b>MuPViS</b> framework ("Ours") against state-of-the-art steganography methods based on key metrics. <b>PSNR</b> and <b>BRISQUE</b> measure visual imperceptibility (higher PSNR and lower BRISQUE are better). <b>acc</b> is the message extraction accuracy (robustness), and <b>Capacity</b> is the amount of hidden data.
+          This table compares our <b>LD-RoViS</b> framework ("Ours") against state-of-the-art steganography methods based on key metrics. <b>PSNR</b> and <b>BRISQUE</b> measure visual imperceptibility (higher PSNR and lower BRISQUE are better). <b>acc</b> is the message extraction accuracy (robustness), and <b>Capacity</b> is the amount of hidden data.
           <br><br>
-          MuPViS achieves the <b>highest visual quality</b> (best PSNR and BRISQUE) and the <b>largest embedding capacity</b> (11983 &plusmn 1446 bits) while maintaining a highly competitive extraction accuracy (99.17%), demonstrating its superior balance across imperceptibility, capacity, and robustness against distortions.
+          LD-RoViS achieves the <b>highest visual quality</b> (best PSNR and BRISQUE) and the <b>largest embedding capacity</b> (11983 &plusmn 1446 bits) while maintaining a highly competitive extraction accuracy (99.17%), demonstrating its superior balance across imperceptibility, capacity, and robustness against distortions.
         </p>
       </div>
     </div>
